@@ -57,6 +57,7 @@ end
   * after_destroy
   * after_commit/after_rollback
 
+
 ### *Be Warned*
 ActiveRecord Callback can be *skipped* by the following methods:
   * decrement
