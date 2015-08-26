@@ -13,6 +13,7 @@ In order to use callbacks you need to register them.
 
 
 ###1.Creating an Object
+
 ..*before_validation.
 ..*after_validation.
 ..*before_save.
@@ -24,6 +25,7 @@ In order to use callbacks you need to register them.
 ..*after_commit/after_rollback.
 
 ###2.Updating and Object
+
 ..*before_validation
 ..*after_validation
 ..*before_save
@@ -35,6 +37,7 @@ In order to use callbacks you need to register them.
 ..*after_commit/after_rollback
 
 ###3.Destroying an Object
+
 ..*before_destroy
 ..*around_destroy
 ..*after_destroy
