@@ -13,7 +13,7 @@ class Person < ActiveRecord::Base
 
   def humans_gone
     if Person.all == []
-      Farm.delete_all
+      Pig.take_over
     end
   end
 
