@@ -10,7 +10,7 @@ class Person < ActiveRecord::Base
     
     def is_old
       if self.age > 20
-        self.name = self.name << " old"
+        self.name = self.name << " is old"
       end
     end
 

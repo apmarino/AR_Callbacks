@@ -14,6 +14,15 @@ class Klass < ActiveRecord::Base
 		end
 end
 ```
+You can also run them anonymously:
+
+```Ruby
+class Klass < ActiveRecord::Base
+  callback_name do
+    #Code Stuff
+  end
+end
+```
 ##Available Callbacks
 
 
@@ -48,6 +57,23 @@ end
   * after_destroy
   * after_commit/after_rollback
 
- ###Active Record Callbacks Resources
+### *Be Warned*
+ActiveRecord Callback can be *skipped* by the following methods:
+  * decrement
+  * decrement_counter
+  * delete
+  * delete_all
+  * increment
+  * increment_counter
+  * toggle
+  * touch
+  * update_column
+  * update_columns
+  * update_all
+  * update_counters
 
-[Callbacks](http://guides.rubyonrails.org/active_record_callbacks.html)
+
+All callbacks in the Klass will not run. 
+
+
+###[Active Record Callbacks Resources](http://guides.rubyonrails.org/active_record_callbacks.html)
