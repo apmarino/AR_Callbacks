@@ -43,4 +43,6 @@ In order to use callbacks you need to register them.
   * after_destroy
   * after_commit/after_rollback
 
+ ### Active Record Callbacks Resources
 
+[Callbacks](http://guides.rubyonrails.org/active_record_callbacks.html)
