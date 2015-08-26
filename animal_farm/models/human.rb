@@ -1,20 +1,23 @@
 require_relative('../lib/connection')
 
 class Person < ActiveRecord::Base
+  
   before_validation :is_old, on: [:create, :update]
-  after_destroy :humans_gone
-  private
-  def is_old
-    if self.age > 20
-      self.name = self.name << " old"
-      binding.pry
-    end
-  end
 
-  def humans_gone
-    if Person.all == []
-      Pig.take_over
+  after_destroy :humans_gone
+  
+  private
+    
+    def is_old
+      if self.age > 20
+        self.name = self.name << " old"
+      end
     end
-  end
+
+    def humans_gone
+      if Person.all == []
+        Pig.take_over
+      end
+    end
 
 end

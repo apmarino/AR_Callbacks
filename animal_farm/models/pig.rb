@@ -14,14 +14,16 @@ class Pig < ActiveRecord::Base
       i +=1
     end
   end
+
   after_create :pigs_female
+
   def self.take_over
     Pig.first.name = "Lord Chancelor " + Pig.first.name
     Pig.second.name = "Prime Executive " + Pig.second.name
   end
+
   private
     def pigs_female
-      binding.pry
       if self.sex == 'Female'
         puts self.name.upcase
       elsif self.sex == "Male"
